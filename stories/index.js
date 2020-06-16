@@ -1,12 +1,12 @@
-import React from "react";
+import React from "react"
 
-import { storiesOf } from "@storybook/react";
-import { action } from "@storybook/addon-actions";
+import { storiesOf } from "@storybook/react"
+import { action } from "@storybook/addon-actions"
 
-import "index.scss";
+import "index.scss"
 
-import Button from "components/Button";
-import DayListItem from "components/DayListItem";
+import Button from "components/Button"
+import DayListItem from "components/DayListItem"
 
 storiesOf("Button", module)
   .addParameters({
@@ -22,7 +22,7 @@ storiesOf("Button", module)
     <Button disabled onClick={action("button-clicked")}>
       Disabled
     </Button>
-  ));
+  ))
 
 storiesOf("DayListItem", module) //Initiates Storybook and registers our DayListItem component
   .addParameters({
@@ -33,4 +33,4 @@ storiesOf("DayListItem", module) //Initiates Storybook and registers our DayList
   .add("Full", () => <DayListItem name="Monday" spots={0} />)
   .add("Clickable", () => (
     <DayListItem name="Tuesday" setDay={action("setDay")} spots={5} /> // action() allows us to create a callback that appears in the actions panel when clicked
-  ));
+  ))
