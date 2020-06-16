@@ -28,7 +28,7 @@
     }
 
     &--full {
-      opacity: 0;
+      opacity: $inactive-opacity;
     }
   }
 }
