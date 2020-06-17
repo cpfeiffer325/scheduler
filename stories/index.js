@@ -52,7 +52,7 @@ const days = [
     name: "Wednesday",
     spots: 0,
   },
-];
+]
 
 storiesOf("DayList", module)
   .addParameters({
@@ -63,4 +63,4 @@ storiesOf("DayList", module)
   ))
   .add("Tuesday", () => (
     <DayList days={days} day={"Tuesday"} setDay={action("setDay")} />
-  ));
+  ))
