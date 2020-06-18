@@ -7,6 +7,7 @@ export default function DayList(props) {
     <ul>
       {props.days.map(day =>
         <DayListItem
+          key={day.id}
           id={day.id}
           name={day.name}
           spots={day.spots}
