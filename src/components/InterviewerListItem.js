@@ -4,7 +4,7 @@ import classNames from 'classnames'
 import './InterviewerListItem.scss'
 
 export default function InterviewerListItem(props) {
-  const interviewersClass = classNames("interviewers", {
+  const interviewerClass = classNames("interviewers", {
     "interviewers__item": !props.selected,
     "interviewers__item--selected": props.selected === true,
   })
@@ -16,7 +16,7 @@ export default function InterviewerListItem(props) {
 
   return (
     <li 
-      className={interviewersClass}
+      className={interviewerClass}
       onClick={props.setInterviewer}
     >
       <img
