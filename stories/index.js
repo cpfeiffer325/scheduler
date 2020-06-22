@@ -16,6 +16,7 @@ import Empty from "components/Appointment/Empty"
 import Show from "components/Appointment/Show"
 import Confirm from "components/Appointment/Confirm"
 import Status from "components/Appointment/Status"
+import Error from "components/Appointment/Error"
 
 // Stories for the Button Component
 storiesOf("Button", module)
@@ -166,3 +167,15 @@ storiesOf("Appointment", module)
   ))
   .add("Saving", () => <Status message="Saving" />)
   .add("Deleting", () => <Status message="Deleting" />)
+  .add("Error Saving", () => (
+    <Error 
+      message="Could not save appointment"
+      onClose={action("onClose")}
+    />
+  ))
+  .add("Error Deleting", () => (
+    <Error 
+      message="Could not delete appointment"
+      onClose={action("onClose")}
+    />
+  ))
