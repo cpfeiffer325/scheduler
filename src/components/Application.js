@@ -28,16 +28,15 @@ export default function Application() {
     })
   },[])
 
+  // console.log('state.interviewers :>> ', state.interviewers);
+
   const appointments = getAppointmentsForDay(state, state.day)
   const schedule = appointments.map((appointment) => {
     const interview = getInterview(state, appointment.interview)
+    console.log('interview :>> ', interview);
+
     return (
-      <Appointment 
-        key={appointment.id}
-        id={appointment.id}
-        time={appointment.time}
-        interview={interview}
-      />
+      <Appointment key={appointment.id} {...appointment} interview={interview}/>
     )
   })
 

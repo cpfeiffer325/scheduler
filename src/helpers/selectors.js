@@ -13,3 +13,13 @@ export function getAppointmentsForDay(state, day) {
     .filter((appointment) => appointments.includes(appointment.id))
     .concat([{ key: "last", time: "5pm" }])
 }
+
+export function getInterview(state, interview) {
+  if (!interview) {
+    return null
+  } else {
+    interview["interviewer"] = state.interviewers[interview.interviewer]
+    return interview
+  }
+}
+
