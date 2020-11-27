@@ -27,16 +27,14 @@ export default function Application() {
       setState(prev => ({day: prev.day, days, appointments, interviewers}))
     })
   },[])
-
-  // console.log('state.interviewers :>> ', state.interviewers);
-
-  const appointments = getAppointmentsForDay(state, state.day)
-  const schedule = appointments.map((appointment) => {
-    const interview = getInterview(state, appointment.interview)
-    console.log('interview :>> ', interview);
-
+  
+  const appointments = getAppointmentsForDay(state, state.day).map((appointment) => {
     return (
-      <Appointment key={appointment.id} {...appointment} interview={interview}/>
+      <Appointment 
+        key={appointment.id} 
+        {...appointment} 
+        interview={getInterview(state, appointment.interview)}
+      />
     )
   })
 
@@ -63,7 +61,7 @@ export default function Application() {
         />
       </section>
       <section className="schedule">
-        {schedule}
+        {appointments}
       </section>
     </main>
   )
