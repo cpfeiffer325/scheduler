@@ -9,12 +9,7 @@ import "./styles.scss"
 
 
 
-export default function Appointment(props) {
-  const {
-    time,
-    interview
-  } = props
-  
+export default function Appointment({ time, interview }) {
   const EMPTY = "EMPTY"
   const SHOW = "SHOW"
   
