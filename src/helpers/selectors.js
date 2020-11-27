@@ -15,11 +15,14 @@ export function getAppointmentsForDay(state, day) {
 }
 
 export function getInterview(state, interview) {
-  if (!interview) {
-    return null
+  if (interview && interview.interviewer) {
+    const result = {
+      ...interview,
+      interviewer: state.interviewers[interview.interviewer]
+    }
+    return result
   } else {
-    interview["interviewer"] = state.interviewers[interview.interviewer]
-    return interview
+    return null
   }
 }
 
