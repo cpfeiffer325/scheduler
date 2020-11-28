@@ -4,12 +4,12 @@ import Button from '../Button'
 import InterviewerList from '../InterviewerList'
 
 export default function Form({
-    name: propName,
-    interviewers,
-    onSave,
-    onCancel,
-    interviewer: propInterviewer
-  }) {
+  interviewer: propInterviewer,
+  interviewers,
+  name: propName,
+  onSave,
+  onCancel,
+}) {
 
   const [name, setName] = useState(propName || "")
   const [interviewer, setInterviewer] = useState(propInterviewer || null)
