@@ -10,7 +10,7 @@ export function getAppointmentsForDay(state, weekday) {
     results.push(state.appointments[day])
   })
 
-  return results
+  return results.concat([{ key: "last", time: "5pm" }])
 }
 
 export function getInterview(state, interview) {
