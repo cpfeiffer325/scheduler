@@ -14,17 +14,17 @@ export default function Form({
   const [name, setName] = useState(propName || "")
   const [interviewer, setInterviewer] = useState(propInterviewer || null)
 
-  function reset() {
+  const reset = () => {
     setName("")
     setInterviewer(null)
   }
 
-  function cancel() {
+  const cancel = () => {
     reset()
     onCancel()
   }
 
-  function save() {
+  const save = () => {
     onSave(name, interviewer)
   }
 

@@ -32,7 +32,7 @@ export default function Application() {
     })
   },[])
 
-  function bookInterview(id, interview) {
+  const bookInterview = (id, interview) => {
     return new Promise((resolve, reject) => {
       const appointment = {
         ...state.appointments[id],
