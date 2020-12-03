@@ -31,7 +31,7 @@ export default function Appointment({
   const SAVING = "SAVING"
   const SHOW = "SHOW"
   
-  const { mode, transition, back } = useVisualMode(interview ? SHOW : EMPTY)
+  const { back, mode, transition } = useVisualMode(interview ? SHOW : EMPTY)
 
   const add = () => {
     transition(CREATE)
