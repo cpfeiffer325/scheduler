@@ -1,23 +1,2 @@
 # Interview Scheduler
-
-## Setup
-
-Install dependencies with `npm install`.
-
-## Running Webpack Development Server
-
-```sh
-npm start
-```
-
-## Running Jest Test Framework
-
-```sh
-npm test
-```
-
-## Running Storybook Visual Testbed
-
-```sh
-npm run storybook
-```
+Lighthouse Labs project to practice React, hooks and Redux. Completed after bootcamp when curriculum was updated to practice React. The app allows scheduling of appointments based on available times and interviewers.
