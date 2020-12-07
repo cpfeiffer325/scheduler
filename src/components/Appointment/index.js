@@ -75,7 +75,7 @@ export default function Appointment({
         <Empty onAdd={add}
       />
       )}
-      {mode === SHOW && (
+      {mode === SHOW && interview && (
         <Show
           student={interview.student}
           interviewer={interview.interviewer}
